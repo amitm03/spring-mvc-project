@@ -1,0 +1,13 @@
+services:
+  mysql:
+    image: 'mysql:8-oracle'
+    environment:
+      - 'MYSQL_DATABASE=social-media-database'
+      - 'MYSQL_PASSWORD=social-media-user'
+      - 'MYSQL_ROOT_PASSWORD=dummypassword'
+      - 'MYSQL_USER=social-media-user'
+    ports:
+      - '3306'
+#    volumes:
+#      - /usr/sbin/mysqld
+
