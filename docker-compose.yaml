@@ -11,3 +11,15 @@ services:
 #    volumes:
 #      - /usr/sbin/mysqld
 
+#lab-exericise-909:
+#  container-name: lab-exercise-909
+#  build:
+#    context: ./
+#    dockerfile: Dockerfile
+#  ports:
+#    - "8092:8092"
+#  depends_on:
+#    - mysql
+#  restart: on-failure
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab Test - User Details Page</title>
+</head>
+<body>
+<div class="container">
+    <a th:href="@{/search}">Back to Search Page</a>
+    <a th:href="@{/}">Back to Home Page</a>
+    <form action="#" th:object="${user}" method="POST">
+        <input type="hidden" th:field="*{id}">
+        First Name: <input type="text" th:field="*{firstName}" placeholder="First Name" class="form-control mb-4 col-4" disabled>
+        <br>
+        Last Name: <input type="text" th:field="*{lastName}" placeholder="Last Name" class="form-control mb-4 col-4" disabled>
+        <br>
+        Email : <input type="email" th:field="*{email}" placeholder="Email" class="form-control mb-4 col-4" disabled>
+        <br>
+    </form>
+    <a th:href="@{/search}">Back to search Page</a>
+    <a th:href="@{/}">Back to Home Page</a>
+</div>
+
+</body>
+</html>

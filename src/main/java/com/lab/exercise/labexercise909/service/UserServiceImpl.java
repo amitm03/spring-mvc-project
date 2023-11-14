@@ -6,6 +6,8 @@ import com.lab.exercise.labexercise909.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 @Component
@@ -46,5 +48,18 @@ public class UserServiceImpl implements UserService{
     public void deleteById(Long id) {
         userRepository.deleteById(Math.toIntExact(id));
     }
+
+    @Override
+    public Integer getUsersCount() {
+        return userRepository.findAll().size();
+    }
+
+    public Collection<User> searchUser(String searchString) {
+        System.out.println("SearchUser Method value :"+searchString);
+        Collection<User> userData = userRepository.searchUser(searchString);
+        System.out.println("userData value :"+userData);
+        return userData;
+    }
+
 
 }
